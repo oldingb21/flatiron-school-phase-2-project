@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>Phase 2 Project Start</h1>
+        <h1>My Library Helper</h1>
         <Navbar />
         <BookLists>
           {booksFirstDisplay}
