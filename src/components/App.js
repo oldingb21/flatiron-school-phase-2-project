@@ -1,7 +1,10 @@
 import React, {useState, useEffect, Children} from 'react';
+
+import {Route} from 'react-router-dom';
 import Navbar from './Navbar';
 import BookLists from './BookLists';
 import Book from './Book/Book';
+import Home from './Home';
 
 function App() {
   const [books, setBooks] = useState([])
@@ -19,12 +22,13 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>My Library Helper</h1>
+        <h1><u>My Library Helper</u></h1>
         <Navbar />
-        <BookLists>
-          {booksFirstDisplay}
-        </BookLists>
       </header>
+      <Home />
+      <BookLists>
+        {booksFirstDisplay}
+      </BookLists>
     </div>
   );
 }
