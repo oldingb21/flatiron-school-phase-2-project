@@ -25,10 +25,14 @@ function App() {
         <h1><u>My Library Helper</u></h1>
         <Navbar />
       </header>
-      <Home />
-      <BookLists>
-        {booksFirstDisplay}
-      </BookLists>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/book-lists">
+        <BookLists>
+          {booksFirstDisplay}
+        </BookLists>
+      </Route>
     </div>
   );
 }
