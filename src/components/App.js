@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import BookLists from './BookLists';
 import Book from './Book/Book';
 import Home from './Home';
+import AddBookForm from '../AddBookForm';
 
 function App() {
   const [books, setBooks] = useState([])
@@ -32,6 +33,9 @@ function App() {
         <BookLists>
           {booksFirstDisplay}
         </BookLists>
+      </Route>
+      <Route path="/add-book">
+        <AddBookForm />
       </Route>
     </div>
   );
