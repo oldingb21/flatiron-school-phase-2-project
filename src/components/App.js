@@ -1,11 +1,11 @@
 import React, {useState, useEffect, Children} from 'react';
 
 import {Route} from 'react-router-dom';
-import Navbar from './Navbar';
+import Header from './Header';
 import BookLists from './BookLists';
 import Book from './Book/Book';
 import Home from './Home';
-import AddBookForm from '../AddBookForm';
+import AddBookForm from './AddBookForm';
 import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App() {
@@ -23,10 +23,7 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1><u>My Library Helper</u></h1>
-        <Navbar />
-      </header>
+      <Header />
       <Switch>
         <Route exact path="/">
           <Home />
