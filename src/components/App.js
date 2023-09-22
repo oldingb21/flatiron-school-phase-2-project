@@ -1,12 +1,12 @@
-import React, {useState, useEffect, Children} from 'react';
+import React, {useState, useEffect} from 'react';
 
-import {Route} from 'react-router-dom';
+import {Route, Routes} from 'react-router-dom';
 import Header from './Header';
 import BookLists from './BookLists';
 import Book from './Book/Book';
 import Home from './Home';
 import AddBookForm from './AddBookForm';
-import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
+
 
 function App() {
   const [books, setBooks] = useState([])
@@ -24,19 +24,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/book-lists">
-          <BookLists>
-              {booksFirstDisplay}
-          </BookLists>
-        </Route>
-        <Route path="/add-book">
-          <AddBookForm />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route exact="true" path="/" element={<Home />} />
+        <Route path="/book-lists" element={<BookLists>{booksFirstDisplay}</BookLists>} />
+        <Route path="/add-book" element={<AddBookForm />} />
+      </Routes>
     </div>
   );
 }
