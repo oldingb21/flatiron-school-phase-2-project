@@ -6,6 +6,7 @@ import BookLists from './BookLists';
 import Book from './Book/Book';
 import Home from './Home';
 import AddBookForm from '../AddBookForm';
+import { Switch } from 'react-router-dom/cjs/react-router-dom.min';
 
 function App() {
   const [books, setBooks] = useState([])
@@ -26,17 +27,19 @@ function App() {
         <h1><u>My Library Helper</u></h1>
         <Navbar />
       </header>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/book-lists">
-        <BookLists>
-          {booksFirstDisplay}
-        </BookLists>
-      </Route>
-      <Route path="/add-book">
-        <AddBookForm />
-      </Route>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/book-lists">
+          <BookLists>
+              {booksFirstDisplay}
+          </BookLists>
+        </Route>
+        <Route path="/add-book">
+          <AddBookForm />
+        </Route>
+      </Switch>
     </div>
   );
 }

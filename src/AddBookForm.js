@@ -11,16 +11,22 @@ const AddBookForm = () => {
             "readingWishList": false}
     })
 
+    const handleFormChange = (e) => {
+        console.log(e.target.value)
+        setNewBook({...newBook, [e.target.name]:e.target.value})
+        console.log(newBook)
+    }
+
     return(
         <form>
             <label>Book Title
-                <input name="title" type="text" required></input>
+                <input name="title" type="text" value={newBook.title} onChange={handleFormChange} required></input>
             </label>
             <label>Author
-                <input name="author" type="text" required></input>
+                <input name="author" type="text" value={newBook.author} onChange={handleFormChange} required></input>
             </label>
             <label>Image URL
-                <input name="image" type="text" required></input>
+                <input name="image" type="text" value={newBook.image} onChange={handleFormChange} required></input>
             </label>
             <label>Book List
                 <select name="status" required>
