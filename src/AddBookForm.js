@@ -5,14 +5,11 @@ const AddBookForm = () => {
         "title": "",
         "author": "",
         "image": "",
-        "status":{
-            "hasRead": false,
-            "isReading": false,
-            "readingWishList": false}
+        "status": ""
     })
 
     const handleFormChange = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setNewBook({...newBook, [e.target.name]:e.target.value})
         console.log(newBook)
     }
@@ -29,11 +26,11 @@ const AddBookForm = () => {
                 <input name="image" type="text" value={newBook.image} onChange={handleFormChange} required></input>
             </label>
             <label>Book List
-                <select name="status" required>
-                    <option value="">--Select Book List--</option>
-                    <option value={true}>Finished Reading</option>
-                    <option value={true}>Actively Reading</option>
-                    <option value={true}>Reading Wishlist</option>
+                <select name="status" value={newBook.status} onChange={handleFormChange} required>
+                    <option value="" disabled>--Select Book List--</option>
+                    <option value="Finished Reading">Finished Reading</option>
+                    <option value="Actively Reading">Actively Reading</option>
+                    <option value="Reading Wishlist">Reading Wishlist</option>
                 </select>
             </label>
             <input type="submit" value="Add Book"></input>
