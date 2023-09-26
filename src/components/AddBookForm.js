@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const AddBookForm = () => {
+const AddBookForm = ({onNewBookSubmit}) => {
     const [newBook, setNewBook] = useState({
         "title": "",
         "author": "",
@@ -8,14 +8,24 @@ const AddBookForm = () => {
         "status": ""
     })
 
+    const onFormSubmit = (e) => {
+        e.preventDefault();
+        fetch('http://localhost:4000/books', {
+            'method' : 'POST',
+            'headers' : {
+                'Content-Type' : 'application/json'
+            },
+            'body' : JSON.stringify(newBook)
+        }).then(r=>r.json())
+        .then((newBookPostData)=> onNewBookSubmit(newBookPostData))
+    }
+
     const handleFormChange = (e) => {
-        // console.log(e.target.value)
         setNewBook({...newBook, [e.target.name]:e.target.value})
-        console.log(newBook)
     }
 
     return(
-        <form>
+        <form onSubmit={onFormSubmit}>
             <label>Book Title
                 <input name="title" type="text" value={newBook.title} onChange={handleFormChange} required></input>
             </label>

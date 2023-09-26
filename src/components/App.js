@@ -21,13 +21,17 @@ function App() {
     return <Book key={id} title={title} author={author} image={image}/>
   })
 
+  const handleNewBookSubmit = (newBook) => {
+    setBooks([...books, newBook])
+  }
+
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route exact="true" path="/" element={<Home />} />
         <Route path="/book-lists" element={<BookLists>{booksFirstDisplay}</BookLists>} />
-        <Route path="/add-book" element={<AddBookForm />} />
+        <Route path="/add-book" element={<AddBookForm onNewBookSubmit={handleNewBookSubmit} />} />
       </Routes>
     </div>
   );
