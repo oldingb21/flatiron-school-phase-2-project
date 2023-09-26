@@ -21,6 +21,13 @@ function App() {
     return <Book key={id} title={title} author={author} image={image}/>
   })
 
+  const finishedBooksFilterList = books.filter((book) => book.status === "Finished Reading")
+  
+  const finishedBooksDisplay = finishedBooksFilterList.map((book) => {
+    const {id, title, author, image} = book
+    return <Book key={id} title={title} author={author} image={image} />
+  })
+
   const handleNewBookSubmit = (newBook) => {
     setBooks([...books, newBook])
   }
@@ -30,7 +37,11 @@ function App() {
       <Header />
       <Routes>
         <Route exact="true" path="/" element={<Home />} />
-        <Route path="/book-lists" element={<BookLists>{booksFirstDisplay}</BookLists>} />
+        <Route path="/book-lists" element={
+          <BookLists>
+            <h3>Finished Books</h3>
+            {finishedBooksDisplay}
+          </BookLists>} />
         <Route path="/add-book" element={<AddBookForm onNewBookSubmit={handleNewBookSubmit} />} />
       </Routes>
     </div>

@@ -2,7 +2,7 @@
 const BookLists = ({children}) => {
     return(
         <div>
-            <h3>BOOKLIST</h3>
+            <h3>BOOKLISTS</h3>
             {children}
         </div>
     )
