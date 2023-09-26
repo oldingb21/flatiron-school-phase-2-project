@@ -1,8 +1,8 @@
 
 const BookLists = ({children}) => {
     return(
-        <div>
-            <h2>BOOKLISTS</h2>
+        <div className="book-lists">
+            <h2>BOOK LISTS</h2>
             {children}
         </div>
     )

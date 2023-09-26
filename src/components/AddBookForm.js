@@ -25,7 +25,7 @@ const AddBookForm = ({onNewBookSubmit}) => {
     }
 
     return(
-        <form onSubmit={onFormSubmit}>
+        <form onSubmit={onFormSubmit} className="new-book-form" >
             <label>Book Title
                 <input name="title" type="text" value={newBook.title} onChange={handleFormChange} required></input>
             </label>

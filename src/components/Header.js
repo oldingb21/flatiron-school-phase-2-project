@@ -2,10 +2,10 @@ import Navbar from "./Navbar";
 
 const Header = () => {
     return (
-        <header>
-            <h1><u>My Library Helper</u></h1>
+        <header className="header">
+            <h1 id="site-title"><u>My Library Helper</u></h1>
             <Navbar />
-      </header>
+        </header>
     )
 }
 
