@@ -16,30 +16,30 @@ function App() {
     .then((booksData)=>setBooks(booksData))
   }, [])
 
-  const booksFirstDisplay = books.map((book)=>{
-    const {id, title, author, image} = book
-    return <Book key={id} title={title} author={author} image={image}/>
-  })
+  // const booksFirstDisplay = books.map((book)=>{
+  //   const {id, title, author, image} = book
+  //   return <Book key={id} title={title} author={author} image={image}/>
+  // })
 
   const finishedBooksFilterList = books.filter((book) => book.status === "Finished Reading")
   
   const finishedBooksDisplay = finishedBooksFilterList.map((book) => {
-    const {id, title, author, image} = book
-    return <Book key={id} title={title} author={author} image={image} />
+    const {id, title, author, image, status} = book
+    return <Book key={id} title={title} author={author} image={image} status={status} id={id} />
   })
 
   const activelyReadingFilterList = books.filter((book)=> book.status === "Actively Reading")
   
   const activelyReadingDisplay = activelyReadingFilterList.map((book)=> {
-    const {id, title, author, image} = book
-    return <Book key={id} title={title} author={author} image={image} />
+    const {id, title, author, image, status} = book
+    return <Book key={id} title={title} author={author} image={image} status={status} id={id} />
   })
 
   const readingWishListFilter = books.filter((book)=> book.status === "Reading Wishlist")
 
   const readingWishListDisplay = readingWishListFilter.map((book) => {
-    const {id, title, author, image} = book
-    return <Book key={id} title={title} author={author} image={image} />
+    const {id, title, author, image, status} = book
+    return <Book key={id} title={title} author={author} image={image} status={status} id={id} />
   })
 
   const handleNewBookSubmit = (newBook) => {
