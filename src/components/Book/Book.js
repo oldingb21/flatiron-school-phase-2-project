@@ -1,5 +1,5 @@
 
-const Book = ({title, author, image, status, id, updateBookList}) => {
+const Book = ({title, author, image, status, id, updateBookList, handleBookDelete}) => {
     
     const handleListChange = (e) => {
         console.log(e.target.name ,e.target.value)
@@ -11,6 +11,13 @@ const Book = ({title, author, image, status, id, updateBookList}) => {
             'body': JSON.stringify({ [e.target.name] : e.target.value })
         }).then(r=>r.json())
         .then((updatedBook)=>updateBookList(updatedBook))
+    }
+
+    const onBookDelete = () => {
+        fetch(`http://localhost:4000/books/${id}`, {
+            'method' : 'DELETE'
+        })
+        .then(handleBookDelete(id))
     }
 
     return (
@@ -26,7 +33,8 @@ const Book = ({title, author, image, status, id, updateBookList}) => {
                         <option value="Reading Wishlist">Reading Wishlist</option>
                     </select>
                 </label>
-            </form>     
+            </form>
+            <button onClick={onBookDelete}>Remove <u>{title}</u></button>   
         </section>
     )
 }
