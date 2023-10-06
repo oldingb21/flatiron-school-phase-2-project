@@ -5,10 +5,68 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #8d6e2d;
+  background-color: #a0785a;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header {
+  color: #a0785a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  background-color: black;
+}
+
+#site-title {
+  justify-self:flex-start;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.navlink {
+  margin: 10px;
+  padding: 10px;
+  background-color: #a0785a;
+}
+
+.home-div {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-book-form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  width: fit-content;
+}
+
+.form-item {
+  margin: 15px;
+}
+
+#form-image {
+  padding: 15px;
 }
