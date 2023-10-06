@@ -61,12 +61,15 @@ function App() {
         <Route exact="true" path="/" element={<Home />} />
         <Route path="/book-lists" element={
           <BookLists>
-            <h2>Finished Books</h2>
-            {finishedBooksDisplay}
-            <h2>Actively Reading</h2>
-            {activelyReadingDisplay}
-            <h2>Reading Wishlist</h2>
-            {readingWishListDisplay}
+            <h2 className='book-list' id='finished-list'>Finished Books
+              {finishedBooksDisplay}
+            </h2>
+            <h2 className='book-list' id='active-list'>Actively Reading
+              {activelyReadingDisplay}
+            </h2>
+            <h2 className='book-list' id='wishlist'>Reading Wishlist
+              {readingWishListDisplay}
+            </h2>
           </BookLists>} />
         <Route path="/add-book" element={<AddBookForm onNewBookSubmit={handleNewBookSubmit} />} />
       </Routes>
