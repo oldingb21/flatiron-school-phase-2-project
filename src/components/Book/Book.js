@@ -24,7 +24,7 @@ const Book = ({title, author, image, status, id, updateBookList, handleBookDelet
         <section className="book">
             <h4><u>{title}</u></h4>
             <p>by: {author}</p>
-            <img src={image} alt={title}/>
+            <img src={image} alt={title} className="book-img"/>
             <form>  
                 <label>Change Book List
                     <select name="status" defaultValue={status} onChange={handleListChange}>
@@ -34,7 +34,7 @@ const Book = ({title, author, image, status, id, updateBookList, handleBookDelet
                     </select>
                 </label>
             </form>
-            <button onClick={onBookDelete}>Remove <u>{title}</u></button>   
+            <button onClick={onBookDelete} className="delete-button">Remove <u>{title}</u></button>   
         </section>
     )
 }

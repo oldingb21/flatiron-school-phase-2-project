@@ -69,6 +69,12 @@ code {
 
 #form-image {
   padding: 15px;
+  width: 80vw;
+}
+
+#home-image {
+  padding: 15px;
+  width: 80vw;
 }
 
 #book-lists {
@@ -110,4 +116,41 @@ code {
   padding:5px;
   border-right: solid 4px;
   border-left: solid 2px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete-button {
+  padding: 5px;
+  margin: 5px;
+}
+
+.book-img {
+  width: 25vw;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  #finished-list {
+    border-right: solid 2px;
+    border-left: solid 2px;
+    margin: 5px;
+  }
+
+  #active-list {
+    border-right: solid 2px;
+    border-left: solid 2px;
+    margin: 5px;
+  }
+
+  #wishlist {
+    border-right: solid 2px;
+    border-left: solid 2px;
+    margin: 5px;
+  }
 }
