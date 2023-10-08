@@ -69,12 +69,12 @@ code {
 
 #form-image {
   padding: 15px;
-  width: 80vw;
+  width: 70vw;
 }
 
 #home-image {
   padding: 15px;
-  width: 80vw;
+  width: 70vw;
 }
 
 #book-lists {
@@ -86,7 +86,7 @@ code {
 #lists-div {
   display: flex;
   flex-direction: column column column;
-  column-width: 25vw;
+  column-width: 23vw;
   flex-wrap: wrap;
 }
 
@@ -99,23 +99,23 @@ code {
 
 #finished-list {
   align-self: flex-start;
-  padding:5px;
-  border-right: solid 2px;
-  border-left: solid 4px;
+  padding:3px;
+  border-right: solid 1px;
+  border-left: solid 2px;
 }
 
 #active-list {
   align-self: flex-start;
-  padding:5px;
-  border-right: solid 2px;
-  border-left: solid 2px;
+  padding:3px;
+  border-right: solid 1px;
+  border-left: solid 1px;
 }
 
 #wishlist {
   align-self: flex-start;
-  padding:5px;
-  border-right: solid 4px;
-  border-left: solid 2px;
+  padding:3px;
+  border-right: solid 2px;
+  border-left: solid 1px;
 }
 
 .book {
@@ -133,6 +133,11 @@ code {
   width: 25vw;
   max-height: 400px;
   object-fit: cover;
+}
+
+.book-title {
+  word-wrap: break-word;
+  max-width: 30vw;
 }
 
 @media screen and (max-width: 800px) {

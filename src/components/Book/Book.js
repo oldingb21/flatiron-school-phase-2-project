@@ -22,7 +22,7 @@ const Book = ({title, author, image, status, id, updateBookList, handleBookDelet
 
     return (
         <section className="book">
-            <h4><u>{title}</u></h4>
+            <h4 className="book-title"><u>{title}</u></h4>
             <p>by: {author}</p>
             <img src={image} alt={title} className="book-img"/>
             <form>  
