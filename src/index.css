@@ -5,10 +5,152 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #8d6e2d;
+  background-color: #a0785a;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header {
+  color: #a0785a;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:space-between;
+  background-color: black;
+}
+
+#site-title {
+  justify-self:flex-start;
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.navlink {
+  margin: 10px;
+  padding: 10px;
+  background-color: #a0785a;
+}
+
+.home-div {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-component {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.new-book-form {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid;
+  width: fit-content;
+}
+
+.form-item {
+  margin: 15px;
+}
+
+#form-image {
+  padding: 15px;
+  width: 80vw;
+}
+
+#home-image {
+  padding: 15px;
+  width: 80vw;
+}
+
+#book-lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#lists-div {
+  display: flex;
+  flex-direction: column column column;
+  column-width: 25vw;
+  flex-wrap: wrap;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#finished-list {
+  align-self: flex-start;
+  padding:5px;
+  border-right: solid 2px;
+  border-left: solid 4px;
+}
+
+#active-list {
+  align-self: flex-start;
+  padding:5px;
+  border-right: solid 2px;
+  border-left: solid 2px;
+}
+
+#wishlist {
+  align-self: flex-start;
+  padding:5px;
+  border-right: solid 4px;
+  border-left: solid 2px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete-button {
+  padding: 5px;
+  margin: 5px;
+}
+
+.book-img {
+  width: 25vw;
+  max-height: 400px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+  #finished-list {
+    border-right: solid 2px;
+    border-left: solid 2px;
+    margin: 5px;
+  }
+
+  #active-list {
+    border-right: solid 2px;
+    border-left: solid 2px;
+    margin: 5px;
+  }
+
+  #wishlist {
+    border-right: solid 2px;
+    border-left: solid 2px;
+    margin: 5px;
+  }
 }
