@@ -11,7 +11,11 @@ You will need 2 terminals open in order to do so. First, navigate to the front-e
 
 ## User Guide
 
-As a user of My Library Helper, you can expect to be able to do a few things. First upon initial render the books already in the database will be fetched and rendered into the Booklists Link of the site. Upon opening the app, you will land on the Home page and greeted with a message and a picture of a library to emphazise the theme. You can navigate the website through the Navbar on the right hand side of the browser. If a user would like to add a book, there is an Add Book section. You can add a title, author, image, and select which list to add the book through the form. There is also an additional animated image on the form page to keep the theme going and fill empty space. Then lastly, there is a Book Lists section of the app. Here a user can see the books displayed in three different lists. One list is "Finished Books" to mark which books you have read. Another list is "Actively Reading" to keep up with the books you are currently reading (I like to read multiple books at once, so this is helpful for me). Then the final list is the "Wishlist", where you can add books you have/want to have and read.
+As a user of My Library Helper, you can expect to be able to do a few things. First upon initial render the books already in the database will be fetched and rendered into the Booklists Link of the site. Upon opening the app, you will land on the Home page and greeted with a message and a picture of a library to emphazise the theme. You can navigate the website through the Navbar on the right hand side of the browser. 
+
+If a user would like to add a book, there is an Add Book section. You can add a title, author, image, and select which list to add the book through the form. There is also an additional animated image on the form page to keep the theme going and fill empty space. 
+
+Then lastly, there is a Book Lists section of the app. Here a user can see the books displayed in three different lists. One list is "Finished Books" to mark which books you have read. Another list is "Actively Reading" to keep up with the books you are currently reading (I like to read multiple books at once, so this is helpful for me). Then the final list is the "Wishlist", where you can add books you have/want to have and read. Each book has elements that allows the user to edit the list the book is displayed in, and has a delete button if the user wishes to delete the book from the app.
 
 ## Contributer's Guide
 
