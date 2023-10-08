@@ -1,70 +1,22 @@
-# Getting Started with Create React App
+# Welcome to the My Library Helper Repository!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My Library Helper is a web application where readers can manage their personal library. I made this app, because sometimes I often have trouble keeping track of the books I have read and want to read. 
 
-## Available Scripts
+## Installation Instructions
 
-In the project directory, you can run:
+In order to use this app, you will need to have json server installed. If you do not, you can install it with `npm install -g json-server` in your terminal. You will also have to clone the back-end repository [here](https://github.com/oldingb21/flatiron-school-phase-2-project-backend). Clone both the back-end and front-end repositories in your terminal. 
 
-### `npm start`
+After you have cloned the repos to your computer, you will run two commands.
+You will need 2 terminals open in order to do so. First, navigate to the front-end directory and run `npm start`. Second, navigate to the back-end directory and run `json-server --watch db.json --port 4000`. It is important to run the extra port command, because all `fetch()` requests run through port 4000.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## User Guide
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+As a user of My Library Helper, you can expect to be able to do a few things. First upon initial render the books already in the database will be fetched and rendered into the Booklists Link of the site. Upon opening the app, you will land on the Home page and greeted with a message and a picture of a library to emphazise the theme. You can navigate the website through the Navbar on the right hand side of the browser. If a user would like to add a book, there is an Add Book section. You can add a title, author, image, and select which list to add the book through the form. There is also an additional animated image on the form page to keep the theme going and fill empty space. Then lastly, there is a Book Lists section of the app. Here a user can see the books displayed in three different lists. One list is "Finished Books" to mark which books you have read. Another list is "Actively Reading" to keep up with the books you are currently reading (I like to read multiple books at once, so this is helpful for me). Then the final list is the "Wishlist", where you can add books you have/want to have and read.
 
-### `npm test`
+## Contributer's Guide
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I welcome any requests to collaborate on this project. If you do so, I simply ask you write adjustments in a branch and make a pull request if you think it should be added to the app. Future goals for my project include user login/authetication, so multiple users can have their own library managed, and I would like to deploy the project so friends and others can use the app. If you would like to help in that regard I welcome collaboration.
 
-### `npm run build`
+## License
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[MIT](https://choosealicense.com/licenses/mit/)
